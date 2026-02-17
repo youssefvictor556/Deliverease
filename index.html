@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DeliverEase – Fast Food Delivery</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">DeliverEase</div>
+    <nav class="nav-actions">
+      <button id="btn-login" class="btn">Log in</button>
+      <button id="btn-orders" class="btn ghost" style="display:none">📋 Orders</button>
+      <button id="btn-cart" class="btn">Cart (<span id="cart-count">0</span>)</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="restaurants" class="restaurants">
+      <div style="text-align:center;margin-bottom:32px">
+        <h1 style="font-size:36px;font-weight:700;margin:0 0 12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Famous Restaurants</h1>
+        <p class="lead">Order from well-known fast-food restaurants nearby</p>
+      </div>
+      <div id="restaurant-list" class="grid"></div>
+    </section>
+
+    <section id="menu-section" class="menu-section hidden">
+      <button id="back-to-list" class="btn small">← Back</button>
+      <div id="menu-header" class="menu-header"></div>
+      <nav id="category-tabs" class="category-tabs"></nav>
+      <div id="menu-items" class="grid"></div>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <div id="modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc" tabindex="-1">
+      <div class="modal-header">
+        <h3 id="modal-title" class="modal-title">Dialog</h3>
+        <button id="modal-close" class="modal-close" type="button" aria-label="Close dialog">✕</button>
+      </div>
+      <div id="modal-body" class="modal-body" role="document" aria-live="polite"></div>
+      <div id="modal-footer" class="modal-footer" hidden></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2024 DeliverEase. All rights reserved.</p>
+    <p style="font-size:13px;margin-top:4px">Fast food delivery made easy</p>
+  </footer>
+
+  <!-- Load JavaScript files in order -->
+  <script src="data.js"></script>
+  <script src="utils.js"></script>
+  <script src="state.js"></script>
+  <script src="modal.js"></script>
+  <script src="rating.js"></script>
+  <script src="menu.js"></script>
+  <script src="cart.js"></script>
+  <script src="auth.js"></script>
+  <script src="admin.js"></script>
+  <script src="adminStats.js"></script>
+  <script src="orderHistory.js"></script>
+  <script src="payment.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

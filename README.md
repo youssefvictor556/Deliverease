@@ -1,3 +1,3 @@
 ## Admin Credentials for test
-- Username: admin
+- Username: admin@gmail.com
 - Password: admin123
